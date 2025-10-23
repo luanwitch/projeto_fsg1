@@ -1,0 +1,30 @@
+:root {
+  /* Paleta de cores (mínimo 8 cores) */
+  --primary-color: #1e3a8a;
+  --secondary-color: #2563eb;
+  --accent-color: #f59e0b;
+  --neutral-dark: #111827;
+  --neutral-medium: #6b7280;
+  --neutral-light: #f3f4f6;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+
+  /* Tipografia */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+
+  /* Espaçamento modular */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Grid */
+  --grid-columns: 12;
+  --gutter: 16px;
+}

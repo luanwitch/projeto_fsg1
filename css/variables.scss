@@ -1,0 +1,45 @@
+
+$max-width-small: 200px;
+$max-width-medium: 400px;
+$max-width-large: 600px;
+
+@mixin responsive-img($size) {
+    width: 100%;
+    max-width: $size;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 16px auto;
+    }
+
+@import 'variables';
+@import 'mixins';
+
+.hero-img {
+    @include responsive-img($max-width-medium);
+}
+
+.card img {
+    @include responsive-img($max-width-small);
+}
+
+.form-wrapper img {
+    @include responsive-img($max-width-small);
+}
+
+
+@mixin responsive-img($size) {
+    display: block;
+    max-width: $size;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 16px auto;
+}
+
+
+@import 'mixins';
+
+.squirrel-img {
+    @include responsive-img(300px);
+}

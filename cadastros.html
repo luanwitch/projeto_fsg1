@@ -1,42 +1,126 @@
 <form action="#" method="POST">
-    <fieldset>
-        <legend>Dados Pessoais</legend>
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+    <link rel="stylesheet" href="css/style.css">
+    <label for="nome">Nome Completo:</label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      required
+      placeholder="Digite seu nome completo"
+    />
 
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
+    <label for="email">E-mail:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      placeholder="exemplo@dominio.com"
+    />
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+    <label for="cpf">CPF:</label>
+    <input
+      type="text"
+      id="cpf"
+      name="cpf"
+      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      inputmode="numeric"
+      placeholder="000.000.000-00"
+      maxlength="14"
+      required
+    />
 
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+    <label for="telefone">Telefone:</label>
+    <input
+      type="tel"
+      id="telefone"
+      name="telefone"
+      pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+      placeholder="(00) 00000-0000"
+      maxlength="15"
+      required
+    />
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(00) 00000-0000" required>
+    <label for="data">Data de Nascimento:</label>
+    <input type="date" id="data" name="data" required />
+  </fieldset>
 
-        <label for="data">Data de Nascimento:</label>
-        <input type="date" id="data" name="data" required>
-    </fieldset>
+  <fieldset>
+    <legend>Endereço</legend>
 
-    <fieldset>
-        <legend>Endereço</legend>
+    <label for="endereco">Endereço:</label>
+    <input
+      type="text"
+      id="endereco"
+      name="endereco"
+      required
+      placeholder="Rua, número e complemento"
+    />
 
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required>
+    <label for="cep">CEP:</label>
+    <input
+      type="text"
+      id="cep"
+      name="cep"
+      pattern="\d{5}-\d{3}"
+      inputmode="numeric"
+      placeholder="00000-000"
+      maxlength="9"
+      required
+    />
 
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+    <label for="cidade">Cidade:</label>
+    <input
+      type="text"
+      id="cidade"
+      name="cidade"
+      required
+      placeholder="Digite sua cidade"
+    />
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required>
+    <label for="estado">Estado:</label>
+    <select id="estado" name="estado" required>
+      <option value="">Selecione</option>
+      <option value="SP">São Paulo</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="PR">Paraná</option>
+      <option value="SC">Santa Catarina</option>
+    </select>
+  </fieldset>
 
-        <label for="estado">Estado:</label>
-        <select id="estado" name="estado" required>
-            <option value="">Selecione</option>
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-        </select>
-    </fieldset>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <button type="submit">Enviar</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+  
+    $('#cpf').mask('000.000.000-00');
+    $('#telefone').mask('(00) 00000-0000');
+    $('#cep').mask('00000-000');
+
+    
+    $('#nome').on('input', function() {
+      this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+    });
+
+    $('#email').attr('maxlength', 50);
+
+    $('#data').mask('0000-00-00');
+
+    $('#endereco').attr('maxlength', 100);
+
+    $('#cidade').on('input', function() {
+      this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+    });
+
+    $('#estado').mask('AA');
+  });
+</script>
+
+  <button type="submit">Enviar</button>
 </form>

@@ -3,41 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página inicial da organização, informações e contatos">
-    <title>Organização XYZ</title>
+    <title>Organização Social</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    body {
+        background-color: pink;
+    }
+</style> 
+    <header>
+    <nav class="navbar container">
+    <a href="index.html" class="logo">OrgSocial</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastros.html">Cadastro</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </nav>
+</header>
+
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <h1>Organização XYZ</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>Sobre Nós</h2>
-            <p>Informações sobre a organização, missão e valores.</p>
+<!-- INÍCIO -->
+<section id="home" class="hero container">
+    <h1>Bem-vindo à Organização Social</h1>
+    <p>Informações sobre a organização e contato:</p>
+    <ul>
+        <li>Email: contato@orgsocial.com</li>
+        <li>Telefone: (11) 99999-9999</li>
+    </ul>
+    <img
+        src="https://cdn.pixabay.com/photo/2020/09/27/03/38/woman-5605529_640.jpg"
+        alt="Sede da Organização Social"
+    />
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="container">
+    <h2>Projetos Sociais</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2024/11/07/03/09/crab-9179589_1280.jpg" alt="Projeto A">
+            <h3>Projeto A</h3>
+            <p>Descrição breve do projeto A.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2024/06/18/21/37/bali-8838762_1280.jpg" alt="Projeto B">
+            <h3>Projeto B</h3>
+            <p>Descrição breve do projeto B.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CADASTRO -->
+<section id="cadastro" class="container">
+    <h2>Cadastro de Voluntário</h2>
+    <div class="form-wrapper">
+        <img src="https://cdn.pixabay.com/photo/2017/08/27/15/38/surfing-2686450_1280.jpg"
+            class="form-img small-img"
+            alt="Formulário de cadastro"
+        />
         </section>
 
-        <section>
-            <h2>Contato</h2>
-            <address>
-                Email: contato@organizacaoxyz.com<br>
-                Telefone: (11) 1234-5678
-            </address>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Organização XYZ</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
 </body>
 </html>
